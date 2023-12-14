@@ -118,6 +118,7 @@
     left: 0;
 
     display: flex;
+    align-items: center;
 
     font-size: 0.8rem;
     font-weight: 600;
@@ -161,7 +162,7 @@
 .coffee__card-votes .sold-out {
     position: absolute;
     right: 0;
-    top: 4px;
+    top: 2px;
 
     display: flex;
     align-items: center;
