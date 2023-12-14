@@ -1,38 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .App {
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #111315;
+    position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App img{
+    width: 100%;
+    height: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.collection__container {
+    background: #1B1D1F;
+    width: 80%;
+    height: auto;
+    position: relative;
+    bottom: 6rem;
+
+    margin: 0 auto;
+    border-radius: 15px;
+    padding-bottom: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.collection__container .collection__container-header {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 3rem;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.collection__container-header h1 {
+    color: #FEF7EE;
+    font-size: 1.7rem;
+
+    margin-bottom: 0.7rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.collection__container-header p {
+    width: 60%;
+    color: #6F757C;
+    font-size: 0.78rem;
+    text-align: justify;
+    word-spacing: -0.7px;
+    text-align-last: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.all:hover, .available:hover {
+    cursor: pointer;
+}
+
+.articles__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .App {
+        height: auto;
+    }
+    .collection__container-header p {
+        width: 90%;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .collection__container-header p {
+        width: 100%;
+        font-size: 0.70rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .collection__container-header h1 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .collection__container-header p {
+        width: 100%;
+        font-size: 0.5rem;
+        font-weight: 700;
+    }
 }

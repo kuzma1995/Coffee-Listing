@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import bgcafe from './assets/bg-cafe.jpg';
+import Card from './components/card/Card';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={bgcafe} alt="coffee background" />
+
+      <div className="collection__container">
+        <div className='collection__container-header'>
+
+          <h1>Our Collection</h1>
+          <p>Introducing our Coffee Collectio, a selection of unique coffees
+            from different tyipes and origins, expertly roasted in small batches
+            and shipped fresh weekly.
+          </p>
+        </div>
+
+        <div className="articles__container">
+          <Card />
+        </div>
+      </div>
     </div>
   );
 }
