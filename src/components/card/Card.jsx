@@ -49,7 +49,14 @@ const handleAvailableClick = () => {
                         <p className="price">{datas.price}</p>
                 </div>
                 <div className="coffee__card-votes">
-                        <p className="rating">{datas.rating ? <img src={Star_fill} alt='star-logo'/> : null}</p>
+                        
+                        {datas.rating ? 
+                            <div className="rating">
+                            <img src={Star_fill} alt='star-logo'/> 
+                            <p>{datas.rating}</p>
+                            </div> : null}
+                        
+
                         {datas.available || <p className='sold-out' >Sold out</p>}
                         <div className="votes">
                         {datas.votes ? `(${datas.votes} votes)`
